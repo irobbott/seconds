@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under Construction | Seconds Pixels</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-placeholder {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+
+        p.caption {
+            margin: 20px 0;
+            font-size: 1em;
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+
+        button.contact-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        button.contact-btn:hover {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
+            -webkit-box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
+            -moz-box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: #888;
+            text-decoration: none;
+            border-bottom: 1px dashed #888;
+        }
+
+        footer a:hover {
+            color: #000;
+            border-color: #000;
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-placeholder">
+        <img src="./assets/images/logo-dark.png" alt="">
+    </div>
+
+    <h1>We're building something awesome.</h1>
+    <p class="caption">You can still reach out via WhatsApp.</p>
+
+    <button class="contact-btn" onclick="contactWhatsApp()">Contact Me</button>
+
+    <footer>
+        Designed with 🤍 by <a href="https:www.iconicrobbott.com" target="_blank" rel="noopener noreferrer">iRobbott</a>
+    </footer>
+
+    <script>
+        function contactWhatsApp() {
+            // Replace with your actual WhatsApp number link
+            window.open('https://wa.me/+2348029587249', '_blank');
+        }
+    </script>
+</body>
+</html>
