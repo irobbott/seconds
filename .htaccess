@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Set custom 404 page
+ErrorDocument 404 /secondspixels/404.html
+
+# Serve files without .html or .php in the URL
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Redirect .html and .php URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.(html|php)\s [NC]
+RewriteRule ^ /%1 [R=301,L]
