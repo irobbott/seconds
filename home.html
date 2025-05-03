@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="http://localhost/secondspixels/assets/og-image.jpg"> <!-- Replace with real image -->
 
     <!-- Favicon -->
-    <link rel="icon" href="http://localhost/secondspixels/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon-light.png" type="image/x-icon">
     <!-- GLightbox -->
     <link type="text/css" rel="stylesheet" href="./assets/vendors/glightbox/glightbox.min.css" />
     <!-- AOS -->
@@ -45,6 +45,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/seconds.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -88,13 +89,16 @@
             </nav>
 
             <div class="home-hero">
-                <P class="heading text-center pb-x4">
+                <P class="heading text-center pb-x4" data-aos="flip-down">
                     PHOTOGRAPHER AND VIDEOGRAPHER
                 </P>
                 <div class="home-hero-img">
-                    <img src="./assets/images/hero-image-2.jpg" alt="">
+                    <img class="lazyload blur-up"
+                    src="https://res.cloudinary.com/dk9vzih30/image/upload/w_20,q_10/v1746280412/hero-image-2_anwlwl.jpg"
+                    data-src="https://res.cloudinary.com/dk9vzih30/image/upload/v1746280412/hero-image-2_anwlwl.jpg"
+                    alt="">
                 </div>
-                <a class="underline" href="">
+                <a class="underline" href="" data-aos="zoom-in">
                     <div class="home-abt">
                         <div>About Me</div>
                         <div><i class='bx bx-right-arrow-alt'></i></div>

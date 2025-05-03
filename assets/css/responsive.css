@@ -1,0 +1,11 @@
+@media (max-width: 1000px) {
+    .home-left {
+        width: 30%;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-left {
+        display: none;
+    }
+}
