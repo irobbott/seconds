@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Set custom 404 page
-ErrorDocument 404 /secondspixels/404.html
+ErrorDocument 404 /seconds/404.html
 
 # Serve files without .html or .php in the URL
 RewriteCond %{REQUEST_FILENAME}.html -f
