@@ -1,4 +1,4 @@
-# Seconds Pixels  
+# Seconds Pixels
 Website for Seconds Pixels Photography brand
 
 🔒 This project is proprietary. Please do not use or copy any part of the code without permission. See LICENSE for details.
@@ -17,7 +17,7 @@ A minimalistic black-and-white photography website featuring:
 
 ### Directory
 - Project lives under:  
-  `http://localhost/secondspixels/` (for local development)
+  `http://localhost/seconds/` (for local development)
 
 ### Fonts
 - Custom font used: `Gallery`
@@ -30,11 +30,11 @@ A minimalistic black-and-white photography website featuring:
 - `.php` or `.html` visits redirect to extensionless paths (e.g., `/home.php` ➜ `/home`).
 
 **Important:**  
-If moving from local development (`/secondspixels/`) to production (root domain), update this line in `.htaccess`:
+If moving from local development (`/seconds/`) to production (root domain), update this line in `.htaccess`:
 
 ```apache
 # Local (in XAMPP)
-RewriteBase /secondspixels/
+RewriteBase /seconds/
 
 # Production (live domain)
 RewriteBase /
