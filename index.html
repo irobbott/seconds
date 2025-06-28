@@ -1,117 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Under Construction | Seconds Pixels</title>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seconds Pixels | Photographer & Cinematographer in Benin City</title>
+  
+    <meta name="description" content="Seconds Pixels is a photography and cinematography brand based in Benin City, led by UC Seconds. We specialize in lifestyle shoots, weddings, music videos, birthdays, portraits, and creative visual storytelling.">
+    
+    <meta name="keywords" content="Benin City photographer, photography in Benin, best phographer in Benin, best photographer in Nigeria, photographer in Nigeria, Nigeria photographer, Nigeria photography, wedding photography Benin, lifestyle photography, birthday shoots, music video shoots, professional cinematography, UC Seconds, Seconds Pixels, Benin photography studio">
+    
+    <meta name="author" content="UC Seconds">
+    <link rel="canonical" href="http://localhost/secondspixels">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Seconds Pixels | Photographer & Cinematographer in Benin City">
+    <meta property="og:description" content="Premium photography and cinematography services in Benin City. Weddings, birthdays, music videos and more. Seconds Pixels brings stories to life visually.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost/secondspixels">
+    <meta property="og:image" content="http://localhost/secondspixels/assets/og-image.jpg"> <!-- Replace with real image -->
+    <meta property="og:locale" content="en_NG">
+    <meta property="og:site_name" content="Seconds Pixels">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seconds Pixels | Photographer & Cinematographer in Benin City">
+    <meta name="twitter:description" content="Creative photo and video shoots for events, music, and lifestyle. Benin-based studio led by UC Seconds.">
+    <meta name="twitter:image" content="http://localhost/secondspixels/assets/og-image.jpg"> <!-- Replace with real image -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon-light.png" type="image/x-icon">
+    <!-- GLightbox -->
+    <link type="text/css" rel="stylesheet" href="./assets/vendors/glightbox/glightbox.min.css" />
+    <!-- AOS -->
+    <link href="./assets/vendors/aos/aos.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/14243d0b86.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/gallery-modern-font/stylesheet.css">
+    <!-- Lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/seconds.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #000;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .logo-placeholder {
-            width: 200px;
-            height: 200px;
-            border: 2px solid #fff;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #888;
-        }
-
-        .logo-placeholder img {
-            width: 100%;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-            letter-spacing: 1px;
-        }
-
-        p.caption {
-            margin: 20px 0;
-            font-size: 1em;
-            color: #aaa;
-            transition: color 0.3s ease;
-        }
-
-        button.contact-btn {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        button.contact-btn:hover {
-            background-color: #fff;
-            color: #000;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
-            -webkit-box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
-            -moz-box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
-        }
-
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 10px;
-        }
-
-        footer a {
-            color: #888;
-            text-decoration: none;
-            border-bottom: 1px dashed #888;
-        }
-
-        footer a:hover {
-            color: #000;
-            border-color: #000;
-            transition: all 0.3s;
+        /* Navigation active backgroun */
+        .navigation li a.active-nav {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(49, 49, 49) 100%);
         }
     </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Seconds Pixels",
+            "image": "http://localhost/secondspixels/assets/og-image.jpg",
+            "description": "A Benin City-based photography and cinematography studio led by UC Seconds. Specializing in weddings, birthdays, lifestyle shoots, music video shoots, and more.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7, Akpabor Street, Off Nneka Street, 1st Ugbor, G.R.A",
+                "addressLocality": "Benin City",
+                "addressRegion": "Edo State",
+                "postalCode": "300102",
+                "addressCountry": "NG"
+            },
+            "url": "http://localhost/secondspixels",
+            "telephone": "+2348029587249", 
+            "sameAs": [
+                "https://www.instagram.com/secondspixels",
+                "https://www.facebook.com/secondspixels",
+                "https://www.youtube.com/@secondspixels"
+            ]
+        }
+    </script>
 </head>
 <body>
-    <div class="logo-placeholder">
-        <img src="./assets/images/logo-dark.png" alt="">
+    <div class="cursor-glow"></div>
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Left side bar -->
+        <nav class="side-bar">
+            <div class="side-section-one">
+                <!-- Logo -->
+                <div class="brand">
+                    <a href="">
+                        <img src="./assets/images/logo-white.png" alt="" class="logo">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <li class="nav-item">
+                        <a href="" class="active-nav"><i class="fa-solid fa-house pr-x1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-briefcase pr-x1"></i> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-headset pr-x1"></i> Contact Me</a>
+                    </li>
+                    <li class="pl-x1">
+                        Gallery
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-heart pr-x1"></i> Weddings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-image-portrait pr-x1"></i> Portraits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-tent pr-x1"></i> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href=""><i class="fa-solid fa-star pr-x1"></i> lifestyle</a>
+                    </li>
+                </div>
+            </div>
+            <div class="side-section-two">
+                
+            </div>
+        </nav>
+        <!-- Main page -->
+        <div class="main-page">
+            Hello
+            <div style="height: 1800px;"></div>
+        </div>
     </div>
-
-    <h1>We're building something awesome.</h1>
-    <p class="caption">You can still reach out via WhatsApp.</p>
-
-    <button class="contact-btn" onclick="contactWhatsApp()">Contact Me</button>
-
-    <footer>
-        Designed with 🖤 by <a href="https://iconicrobbott.com/" target="_blank">iRobbott</a>
-    </footer>
-
+    
+    <!-- Lazysizes -->
+    <script src="./assets/vendors/lazysizes/lazysizes.min.js" async=""></script>
+    <!-- GLightbox -->
+    <script src="./assets/vendors/glightbox/glightbox.min.js"></script>
+    <!-- AOS -->
+    <script src="./assets/vendors/aos/aos.js"></script>
+    <!-- GSAP -->
+    <script src="./assets/vendors/gsap/gsap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
-        function contactWhatsApp() {
-            // Replace with your actual WhatsApp number link
-            window.open('https://wa.me/+2348029587249', '_blank');
-        }
+        AOS.init();
     </script>
 </body>
 </html>
