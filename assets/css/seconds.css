@@ -18,6 +18,8 @@
     --font-secondary: 'Gallery Modern', serif;
 
     --primary-transition: all 0.3s;
+
+    --gradient-bg: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(37, 37, 37) 100%);
 }
 
 body {
@@ -63,6 +65,10 @@ body {
 
 .text-secondary-2 {
     background: var(--color-secondary-light);
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 /* Font size classes */
@@ -220,6 +226,7 @@ li {
     filter: blur(0);
 }
 
+/* Cursor */
 .cursor-glow {
     position: fixed;
     top: 0;
@@ -233,6 +240,27 @@ li {
     transform: translate(-50%, -50%);
     transition: transform 0.05s ease-out;
     z-index: 9999;
+}
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: -20px 0 0 -20px;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: transparent; /* Keep transparent */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Thin white outline */
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
+    z-index: 9999;
+}
+.cursor.hovering-link {
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    transition: all 0.1s;
 }
 
 /* Other stylings */
@@ -251,6 +279,8 @@ Side bar
     width: 250px;
     height: 100vh;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     border-right: 1px solid #313131;
 }
 
@@ -283,8 +313,8 @@ Side bar
     width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-left: auto;
+    gap: 5px;
+    margin: 0 auto 0 auto;
 }
 
 /* .navigation li,
@@ -303,6 +333,7 @@ Side bar
 .navigation li a {
     width: 100%;
     height: 100%;
+    color: #bebebe;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -312,10 +343,126 @@ Side bar
     border-bottom: 1px solid transparent;
 }
 
-.navigation li a:hover {
+/* No hover for active page */
+.navigation li a:hover:not(.no-hover) {
     border-bottom: 1px solid #313131;
     font-size: 1.1em;
+    color: #fff;
     transition: all 0.3s;
+}
+
+/* Sidebar footer */
+.side-section-two {
+    width: 90%;
+    margin: auto auto 0 auto;
+    font-size: 0.8em;
+}
+
+.ceo-info {
+    width: 100%;
+    height: 80px;
+    background: var(--gradient-bg);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #313131;
+}
+
+.ceo-avatar {
+    width: 40px;
+    height: 40px;
+    outline: 2px solid #acacac;
+    border-radius: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+.ceo-avatar img {
+    width: 100%;
+}
+
+.ceo-pos {
+    color: #a5a5a5;
+}
+
+.ceo-socials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-bg);
+    font-size: 1.1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #313131;
+}
+
+.social-icon:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(58, 58, 58) 100%);
+}
+
+.ceo-footer {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    color: #a5a5a5;
+}
+
+.ceo-footer a {
+    color: #c9c9c9;
+    transition: all 0.3s;
+}
+
+.ceo-footer a:hover {
+    color: #fff000;
+    transition: all 0.3s;
+}
+
+.r-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.r-tooltip:hover {
+    color: #1abc9c;
+}
+
+.r-tooltip .r-tooltiptext {
+    visibility: hidden;
+    width: 230px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the link */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+.r-tooltip:hover .r-tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 /*****************************
