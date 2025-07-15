@@ -22,70 +22,6 @@
     --gradient-bg: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(37, 37, 37) 100%);
 }
 
-.light-mode {
-    --color-primary-dark: #FFFFFF;
-    --color-primary-light: #000000;
-
-    --color-secondary-dark: #E5E5E5;
-    --color-secondary-light: #1C1C1C;
-
-    --gradient-bg: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgb(230, 230, 230) 100%);
-}
-
-/* Theme toggle css */
-#theme-toggle-container {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-75%);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#theme-toggle-btn {
-    background-color: var(--color-secondary-dark);
-    color: var(--color-primary-light);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: var(--primary-transition);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-#theme-options {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-secondary-dark);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-#theme-toggle-container.open #theme-options {
-    transform: translateX(0%);
-}
-
-.theme-option {
-    background: none;
-    border: none;
-    color: var(--color-primary-light);
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.theme-option:hover {
-    background-color: var(--color-secondary-light);
-    color: var(--color-primary-dark);
-}
-
 body {
     background: var(--color-primary-dark);
     color: var(--color-primary-light);
@@ -724,15 +660,4 @@ header {
     to {
         width: 100%;
     }
-}
-
-.dot {
-    position: absolute;
-    background-color: #0ae448;
-    width: 2vw;
-    height: 2vw;
-    border-radius: 50%;
-    will-change: transform, opacity;
-    pointer-events: none;
-    z-index: 9999;
 }
