@@ -34,7 +34,7 @@
     <!-- AOS -->
     <link href="./assets/vendors/aos/aos.css" rel="stylesheet">
     <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/14243d0b86.js" crossorigin="anonymous"></script>
+    <script src="./assets/vendors/fontawesome/fontawesome.js" crossorigin="anonymous"></script>
     <!-- Custom icon font -->
     <link rel="stylesheet" href="./assets/css/icons.css">
     <!-- Fonts -->
@@ -116,7 +116,7 @@
                         <a href=""><i class="fa-solid fa-tent pr-x1"></i> Events</a>
                     </li>
                     <li class="nav-item">
-                        <a href=""><i class="fa-solid fa-star pr-x1"></i> lifestyle</a>
+                        <a href=""><i class="fa-solid fa-star pr-x1"></i> Lifestyle</a>
                     </li>
                 </div>
             </div>
@@ -159,8 +159,39 @@
                 </div>
             </div>
         </nav>
+        <!-- Mini nav -->
+        <div class="mini-nav">
+            <div class="main-nav-blur"></div>
+            <div class="book-call">
+                <li class="nav-item">
+                    <a href="" class=""><i class="fa-solid fa-phone pr-x1"></i> Book a call</a>
+                </li>
+            </div>
+            <div class="mini-nav-main">
+                <div class="social-profile">
+                    <button>
+                        <img src="./assets/images/seconds-avatar.jpg" alt="">
+                    </button>
+                </div>
+                <div class="mini-nav-logo">
+                    <a href="">
+                        <img src="./assets/images/logo-white.png" alt="">
+                    </a>
+                </div>
+                <div class="mini-nav-button">
+                    <button>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- Main page -->
         <div class="main-page">
+            <div class="body-lines">
+                <div class="body-line-1"></div>
+                <div class="body-line-2"></div>
+                <div class="body-line-3"></div>
+            </div>
             <!-- Header -->
             <header>
                 <div class="bg-shine"></div>
@@ -168,7 +199,7 @@
                 <div class="hero">
                     <div class="hero-main">
                         <div class="hero-main-content">
-                            <h1>
+                            <h1 class="hero-caption">
                                 Creating Memories Through the Lens
                             </h1>
                             <p class="mb-x2">
@@ -206,32 +237,167 @@
                 </div>
             </header>
 
-            <!-- <button id="toggle-theme">Toggle Light/Dark</button> -->
+            <!-- About section -->
+            <section>
+                <div class="section-intro">
+                    <div class="section-intro-title">
+                        ME
+                    </div>
+                    <div class="section-intro-divider"></div>
+                </div>
+                <div class="about-section">
+                    <div class="about-section-left">
+                        <video autoplay muted loop playsinline class="about-video" id="aboutVideo">
+                            <source src="./assets/videos/stock.mp4" type="video/mp4" />
+                            Your browser cannot display this video.
+                        </video>
+                        <div class="play-pause" id="videoToggle">
+                            <i class="fa-solid fa-pause" id="pauseIcon"></i>
+                            <i class="fa-solid fa-play" id="playIcon" style="display: none;"></i>
+                        </div>
+                    </div>
+                    <div class="about-section-right text-bold">
+                        <span class="text-uppercase">
+                            I'M UCHE IKPE
+                        </span>
+                        <br>
+                        <span>
+                            &mdash; the eye behind
+                        </span>
+                        <br>
+                        <span class="text-uppercase">
+                            SECONDS PIXELS
+                        </span>
+                        <br>
+                        <span>
+                            based in
+                        </span>
+                        <br>
+                        <span class="text-uppercase">
+                            BENIN CITY, EDO
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section>
+                <div class="section-intro">
+                    <div class="section-intro-title">
+                        SERVICES
+                    </div>
+                    <div class="section-intro-divider"></div>
+                </div>
+                <div class="services">
+                    <div class="services-head text-bold">
+                        WHAT I <br> OFFER
+                    </div>
+                    <div class="services-detail">
+                        Driven by the art of storytelling, I create compelling visuals that turn fleeting seconds into lasting memories. My work captures not just faces, but feelings &mdash; honest, unscripted, and deeply human.
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="card-blur"></div>
+                        <a class="s-c" href="">
+                            <div class="service-card-details">
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-heart pr-x1"></i>
+                                </div>
+                                <div class="service-card-title my-x1">
+                                    Weddings
+                                </div>
+                                <div class="service-card-caption">
+                                    Capturing the magic, emotions, and timeless moments of your special day.
+                                </div>
+                                <div class="service-card-btn">
+                                    <a href="" class="">VIEW GALLERY <i class="fa-solid fa-arrow-right ml-x1"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-blur"></div>
+                        <a class="s-c" href="">
+                            <div class="service-card-details">
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-image-portrait pr-x1"></i>
+                                </div>
+                                <div class="service-card-title my-x1">
+                                    Portraits
+                                </div>
+                                <div class="service-card-caption">
+                                    Creating powerful, personal portraits that reflect true character and style.
+                                </div>
+                                <div class="service-card-btn">
+                                    <a href="" class="">VIEW GALLERY <i class="fa-solid fa-arrow-right ml-x1"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-blur"></div>
+                        <a class="s-c" href="">
+                            <div class="service-card-details">
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-tent pr-x1"></i>
+                                </div>
+                                <div class="service-card-title my-x1">
+                                    Events
+                                </div>
+                                <div class="service-card-caption">
+                                    Documenting the energy and highlights of every celebration, big or small.
+                                </div>
+                                <div class="service-card-btn">
+                                    <a href="" class="">VIEW GALLERY <i class="fa-solid fa-arrow-right ml-x1"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-blur"></div>
+                        <a class="s-c" href="">
+                            <div class="service-card-details">
+                                <div class="service-card-icon">
+                                    <i class="fa-solid fa-star pr-x1"></i>
+                                </div>
+                                <div class="service-card-title my-x1">
+                                    Lifestyle
+                                </div>
+                                <div class="service-card-caption">
+                                    Showcasing real-life moments with a touch of artistry and authenticity.
+                                </div>
+                                <div class="service-card-btn">
+                                    <a href="" class="">VIEW GALLERY <i class="fa-solid fa-arrow-right ml-x1"></i></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
             
             
             
             <div style="height: 1800px;"></div>
 
-            <!-- Theme Toggle Container -->
-            <div id="theme-toggle-container">
-                <button id="theme-toggle-btn">
-                    <i class="fa-solid fa-circle-half-stroke"></i>
-                </button>
-
-                <div id="theme-options">
-                    <button class="theme-option" data-theme="dark" title="Dark Mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <button class="theme-option" data-theme="light" title="Light Mode">
-                        <i class="fa-solid fa-sun"></i>
-                    </button>
-                    <button class="theme-option" data-theme="auto" title="System Preference">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-                    </button>
-                </div>
-            </div>
+            
         </div>
     </div>
+
+    <!-- Scroll progress and top button -->
+    <a href="#">
+        <div class="to-top">
+            <div class="scroll-line">
+                <div class="scroll-fill"></div>
+            </div>
+            <div class="scroll">
+                SCROLL TO TOP <i class="fa-solid fa-arrow-right ml-x1"></i>
+            </div>
+        </div>
+    </a>
     
     <!-- Lazysizes -->
     <script src="./assets/vendors/lazysizes/lazysizes.min.js" async=""></script>
@@ -246,11 +412,6 @@
     <script src="./assets/js/main.js"></script>
     <script>
         AOS.init();
-
-        // const button = document.getElementById('toggle-theme');
-        // button.addEventListener('click', () => {
-        //     document.documentElement.classList.toggle('light-mode');
-        // });
     </script>
 </body>
 </html>

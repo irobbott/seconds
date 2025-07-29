@@ -61,6 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Disable cursor for non-PC devices
+function isPC() {
+    return window.matchMedia("(pointer: fine)").matches;
+}
+
+// When the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    if (!isPC()) {
+    // Disable or remove the custom cursor for non-PC devices
+    const cursor = document.querySelector(".cursor");
+        if (cursor) {
+            cursor.style.display = "none"; // Option 1: hide it
+            // cursor.remove(); // Option 2: remove it completely from the DOM
+        }
+    }
+});
+
 // Hero animation
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll('.hero-main-images .hero-img');
@@ -154,5 +171,49 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             window.location.href = link;
         }, 600); // Adjust this delay if needed
+    });
+});
+
+// Play/pause toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('aboutVideo');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+    const toggleBtn = document.getElementById('videoToggle');
+
+    if (video && playIcon && pauseIcon && toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'inline';
+        } else {
+          video.pause();
+          playIcon.style.display = 'inline';
+          pauseIcon.style.display = 'none';
+        }
+      });
+    }
+});
+
+// Scroll progress
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollFill = document.querySelector('.scroll-fill');
+    const toTop = document.querySelector('.to-top');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        // Update scroll fill height
+        scrollFill.style.height = scrollPercent + '%';
+
+        // Toggle visibility after 300px
+        if (scrollTop > 300) {
+            toTop.classList.add('visible');
+        } else {
+            toTop.classList.remove('visible');
+        }
     });
 });
