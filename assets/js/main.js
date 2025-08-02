@@ -1,43 +1,3 @@
-// Theme toggle
-document.addEventListener('DOMContentLoaded', function () {
-    const root = document.documentElement;
-    const container = document.getElementById('theme-toggle-container');
-    const toggleBtn = document.getElementById('theme-toggle-btn');
-    const optionButtons = document.querySelectorAll('.theme-option');
-
-    // Open/close toggle menu
-    toggleBtn.addEventListener('click', () => {
-        container.classList.toggle('open');
-    });
-
-    // Apply theme based on selection
-    optionButtons.forEach(button => {
-        button.addEventListener('click', () => {
-        const selectedTheme = button.getAttribute('data-theme');
-        applyTheme(selectedTheme);
-        localStorage.setItem('theme', selectedTheme);
-        });
-    });
-
-    function applyTheme(theme) {
-        root.classList.remove('light-mode');
-        if (theme === 'light') {
-        root.classList.add('light-mode');
-        } else if (theme === 'auto') {
-        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-        if (prefersLight) {
-            root.classList.add('light-mode');
-        }
-        // else: default dark mode stays
-        }
-        // theme === 'dark' just leaves dark mode as default
-    }
-
-    // Apply saved theme on page load
-    const savedTheme = localStorage.getItem('theme') || 'auto';
-    applyTheme(savedTheme);
-});
-
 //  Cursor effect
 document.addEventListener('DOMContentLoaded', () => {
     const glow = document.querySelector('.cursor');
@@ -76,6 +36,50 @@ document.addEventListener("DOMContentLoaded", function () {
             // cursor.remove(); // Option 2: remove it completely from the DOM
         }
     }
+});
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('mobileMenu');
+    const icon = toggleButton.querySelector('i');
+    const menuItems = [...menu.querySelectorAll('.mobile-menu-links li, .mobile-menu-bottom > *')];
+
+    let isOpen = false;
+
+    toggleButton.addEventListener('click', function () {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+            // Open menu
+            menu.classList.add('active');
+            document.body.classList.add('no-scroll');
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+
+            // Wait for opacity transition before showing elements
+            setTimeout(() => {
+                menu.classList.add('show-elements');
+                menuItems.forEach((item, index) => {
+                    item.style.transitionDelay = `${index * 50}ms`;
+                });
+            }, 200); // matches CSS fade time
+        } else {
+            // Close menu
+            menu.classList.remove('show-elements');
+            menuItems.forEach(item => {
+                item.style.transitionDelay = '0ms';
+            });
+
+            // Wait for item animation to finish before hiding background
+            setTimeout(() => {
+                menu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }, 200); // keep in sync with CSS transitions
+        }
+    });
 });
 
 // Hero animation
@@ -215,5 +219,61 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             toTop.classList.remove('visible');
         }
+    });
+});
+
+// Accordion
+// document.addEventListener("DOMContentLoaded", () => {
+//     const accordionHeaders = document.querySelectorAll(".accordion-header");
+//     const accordionContents = document.querySelectorAll(".accordion-content");
+
+//     accordionHeaders.forEach((header) => {
+//         header.addEventListener("click", () => {
+//             const accordionItem = header.parentElement;
+//             const accordionContent = accordionItem.querySelector(".accordion-content");
+
+//             if (!accordionContent) return;
+
+//             accordionContents.forEach((content) => {
+//                 if (content !== accordionContent) {
+//                     content.classList.remove("active");
+//                     content.style.maxHeight = "0";
+//                 }
+//             });
+
+//             const isActive = accordionContent.classList.contains("active");
+
+//             if (isActive) {
+//                 accordionContent.classList.remove("active");
+//                 accordionContent.style.maxHeight = "0";
+//             } else {
+//                 accordionContent.classList.add("active");
+//                 accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+//             }
+//         });
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionItems = document.querySelectorAll(".accodion-item");
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        const button = item.querySelector("a.btn");
+
+        header.addEventListener("click", function (e) {
+            // Prevent closing/opening when the button is clicked
+            if (e.target.closest("a.btn")) return;
+
+            // Close all others if you want only one open at a time
+            accordionItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove("open");
+                }
+            });
+
+            // Toggle current
+            item.classList.toggle("open");
+        });
     });
 });
